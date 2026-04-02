@@ -19,7 +19,7 @@ const buildUserProfileQuery = (username: string) => ({
             languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name color } } }
           }
         }
-        repositoriesContributedTo(contributionTypes:[COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) { totalCount }
+        repositoriesContributedTo(contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]) { totalCount }
         contributionsCollection { contributionCalendar { totalContributions weeks { contributionDays { contributionCount date } } } }
       }
     }
@@ -38,22 +38,15 @@ const fetchGraphqlProfile = async (username: string, token: string): Promise<Raw
   return payload.data;
 };
 
-const REST_TIMEOUT_MS = 3_000;
-
 const fetchLifetimeCommitCount = async (username: string, token: string): Promise<number> => {
-  const abortController = new AbortController();
-  const timeoutId = setTimeout(() => abortController.abort(), REST_TIMEOUT_MS);
   try {
     const response = await fetch(`https://api.github.com/search/commits?q=author:${username}`, {
       headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github.cloak-preview+json' },
-      signal: abortController.signal,
     });
-    clearTimeout(timeoutId);
     if (!response.ok) return 0;
     const data = await response.json();
     return data.total_count || 0;
   } catch {
-    clearTimeout(timeoutId);
     return 0;
   }
 };
@@ -82,7 +75,7 @@ export const fetchGithubData = (
   }
 
   const fetchPromise = (async () => {
-    const [graphql, restCommitCount] = await Promise.all([
+    const[graphql, restCommitCount] = await Promise.all([
       fetchGraphqlProfile(username, token),
       fetchLifetimeCommitCount(username, token),
     ]);
