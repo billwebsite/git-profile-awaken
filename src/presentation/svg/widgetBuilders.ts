@@ -9,6 +9,9 @@ export const buildStatusWindow = (profile: CharacterProfile, theme: ThemeConfig)
   const radarMaxValue = 100;
   const radarValues = profile.stats.map((s) => Math.max(10, s.progress));
 
+  const levelDisplay = profile.level > 999 ? '999+' : profile.level.toString();
+  const expRatio = Math.min(1, Math.max(0, profile.nextExp > 0 ? profile.exp / profile.nextExp : 1));
+
   const statsList = profile.stats
     .map(
       (s, i) => `
@@ -40,15 +43,15 @@ export const buildStatusWindow = (profile: CharacterProfile, theme: ThemeConfig)
 
   const content = `
     <rect x="20" y="20" width="680" height="100" rx="12" fill="${theme.panel}" stroke="${theme.border}" stroke-width="2"/>
-    <text x="45" y="60" font-size="34" font-weight="900" fill="${theme.primary}" letter-spacing="2">LV. ${profile.level}</text>
-    <text x="195" y="52" font-size="22" font-weight="800" fill="${theme.text}">${escapeSvgText(profile.username)}</text>
-    <text x="195" y="80" font-size="16" font-weight="600" fill="${theme.textMuted}">Class: <tspan fill="${theme.accent}">${escapeSvgText(profile.jobClass.name)}</tspan></text>
+    <text x="45" y="60" font-size="34" font-weight="900" fill="${theme.primary}" letter-spacing="2">LV. ${levelDisplay}</text>
+    <text x="215" y="52" font-size="22" font-weight="800" fill="${theme.text}">${escapeSvgText(profile.username)}</text>
+    <text x="215" y="80" font-size="16" font-weight="600" fill="${theme.textMuted}">Class: <tspan fill="${theme.accent}">${escapeSvgText(profile.jobClass.name)}</tspan></text>
 
     <text x="670" y="55" font-size="14" font-weight="800" fill="${theme.textMuted}" text-anchor="end" letter-spacing="1">OVERALL RANK</text>
     <text x="670" y="95" font-size="44" font-weight="900" fill="${theme.rankColors[profile.rank]}" text-anchor="end" class="glow">${escapeSvgText(profile.rank)}</text>
 
     <rect x="45" y="105" width="630" height="4" rx="2" fill="${theme.border}"/>
-    <rect x="45" y="105" width="${630 * (profile.exp / profile.nextExp)}" height="4" rx="2" fill="${theme.accent}"/>
+    <rect x="45" y="105" width="${630 * expRatio}" height="4" rx="2" fill="${theme.accent}"/>
 
     <rect x="20" y="140" width="350" height="320" rx="12" fill="${theme.panel}" stroke="${theme.border}"/>
     <text x="195" y="170" font-size="16" font-weight="800" fill="${theme.primary}" letter-spacing="2" text-anchor="middle">CORE ATTRIBUTES</text>
