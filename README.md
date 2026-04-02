@@ -16,61 +16,86 @@ Drawing inspiration from the iconic System interfaces found in LitRPG and progre
 
 ## ⚡ Quick Start
 
-Add this to your GitHub profile `README.md` — replace `YOUR_GITHUB_USERNAME` with your actual username:
+You can use the public global gateway instantly. Add this to your GitHub profile `README.md` — replace `YOUR_GITHUB_USERNAME` with your actual username:
 
 ```md
-![RPG Status](https://YOUR_DEPLOYED_URL/api?username=YOUR_GITHUB_USERNAME)
+![RPG Status](https://git-profile-awaken.vercel.app/api?username=YOUR_GITHUB_USERNAME)
 ```
 
 That's it. One line. Your profile now has an RPG Status Window.
 
 ---
 
-## 🎮 Available Widgets
+## 🎮 The System Arsenal ([Live Demos](https://git-profile-awaken.vercel.app/))
 
-### Status Window *(main widget)*
+*Note: The following visual data is rendered using System Monarch Authority (`mode=admin`) to demonstrate maximum potential output.*
 
+### Status Window *(Core Widget)*
 The complete RPG character sheet — level, rank, all 6 core attributes, radar chart, mana bar, and job class.
+*(Theme: `solo_leveling`)*
+
+<p align="center">
+  <img src="https://git-profile-awaken.vercel.app/api?username=billtruong003&mode=admin&theme=solo_leveling&widget=status" alt="Status Window">
+</p>
 
 ```md
-![Status](https://YOUR_DEPLOYED_URL/api?username=YOUR_GITHUB_USERNAME&widget=status)
+![Status](https://git-profile-awaken.vercel.app/api?username=YOUR_GITHUB_USERNAME&theme=solo_leveling&widget=status)
 ```
 
 ### Active Quest
-
 Shows your latest repository as an RPG quest with dynamic rank based on repo size.
+*(Theme: `cyberpunk`)*
+
+<p align="center">
+  <img src="https://git-profile-awaken.vercel.app/api?username=billtruong003&mode=admin&theme=cyberpunk&widget=quest" alt="Active Quest">
+</p>
 
 ```md
-![Quest](https://YOUR_DEPLOYED_URL/api?username=YOUR_GITHUB_USERNAME&widget=quest)
+![Quest](https://git-profile-awaken.vercel.app/api?username=YOUR_GITHUB_USERNAME&theme=cyberpunk&widget=quest)
 ```
 
 ### Passive Skills
-
 Top 4 programming languages displayed as skill masteries with level indicators.
+*(Theme: `tokyonight`)*
+
+<p align="center">
+  <img src="https://git-profile-awaken.vercel.app/api?username=billtruong003&mode=admin&theme=tokyonight&widget=skill" alt="Passive Skills">
+</p>
 
 ```md
-![Skills](https://YOUR_DEPLOYED_URL/api?username=YOUR_GITHUB_USERNAME&widget=skill)
+![Skills](https://git-profile-awaken.vercel.app/api?username=YOUR_GITHUB_USERNAME&theme=tokyonight&widget=skill)
 ```
 
 ### Contribution Analysis
-
 Weekly activity bar chart, streaks, daily average, and contribution grade.
+*(Theme: `dracula`)*
+
+<p align="center">
+  <img src="https://git-profile-awaken.vercel.app/api?username=billtruong003&mode=admin&theme=dracula&widget=contribution" alt="Contribution Analysis">
+</p>
 
 ```md
-![Contributions](https://YOUR_DEPLOYED_URL/api?username=YOUR_GITHUB_USERNAME&widget=contribution)
+![Contributions](https://git-profile-awaken.vercel.app/api?username=YOUR_GITHUB_USERNAME&theme=dracula&widget=contribution)
 ```
 
 ### Individual Stat Runes
+Single stat cards for any of the 6 core attributes. Mix and match to build your own layout.
 
-Single stat cards for any of the 6 core attributes.
+<p align="center">
+  <img src="https://git-profile-awaken.vercel.app/api?username=billtruong003&mode=admin&theme=matrix&widget=stat&target=STR" width="32%" alt="STR">
+  <img src="https://git-profile-awaken.vercel.app/api?username=billtruong003&mode=admin&theme=genshin_electro&widget=stat&target=AGI" width="32%" alt="AGI">
+  <img src="https://git-profile-awaken.vercel.app/api?username=billtruong003&mode=admin&theme=elden_ring&widget=stat&target=INT" width="32%" alt="INT">
+</p>
+<p align="center">
+  <img src="https://git-profile-awaken.vercel.app/api?username=billtruong003&mode=admin&theme=valorant&widget=stat&target=VIT" width="32%" alt="VIT">
+  <img src="https://git-profile-awaken.vercel.app/api?username=billtruong003&mode=admin&theme=hextech&widget=stat&target=LUK" width="32%" alt="LUK">
+  <img src="https://git-profile-awaken.vercel.app/api?username=billtruong003&mode=admin&theme=abyssal&widget=stat&target=CHA" width="32%" alt="CHA">
+</p>
 
 ```md
-![STR](https://YOUR_DEPLOYED_URL/api?username=YOUR_GITHUB_USERNAME&widget=stat&target=STR)
-![AGI](https://YOUR_DEPLOYED_URL/api?username=YOUR_GITHUB_USERNAME&widget=stat&target=AGI)
-![INT](https://YOUR_DEPLOYED_URL/api?username=YOUR_GITHUB_USERNAME&widget=stat&target=INT)
-![VIT](https://YOUR_DEPLOYED_URL/api?username=YOUR_GITHUB_USERNAME&widget=stat&target=VIT)
-![LUK](https://YOUR_DEPLOYED_URL/api?username=YOUR_GITHUB_USERNAME&widget=stat&target=LUK)
-![CHA](https://YOUR_DEPLOYED_URL/api?username=YOUR_GITHUB_USERNAME&widget=stat&target=CHA)
+![STR](https://git-profile-awaken.vercel.app/api?username=YOUR_GITHUB_USERNAME&widget=stat&target=STR)
+![AGI](https://git-profile-awaken.vercel.app/api?username=YOUR_GITHUB_USERNAME&widget=stat&target=AGI)
+![INT](https://git-profile-awaken.vercel.app/api?username=YOUR_GITHUB_USERNAME&widget=stat&target=INT)
 ```
 
 ---
@@ -90,51 +115,34 @@ Single stat cards for any of the 6 core attributes.
 
 ---
 
-## 🎨 Themes
+## 🎨 Dimension Themes
 
-Add `&theme=THEME_NAME` to any widget URL. **21 themes available:**
+Append `&theme=THEME_NAME` to any widget URL. The System currently supports **21 unique dimensions**:
 
-| Theme | Inspiration | Theme | Inspiration |
-|-------|-------------|-------|-------------|
-| `solo_leveling` *(default)* | Solo Leveling | `cyberpunk` | Cyberpunk 2077 |
-| `dracula` | Dracula IDE | `tokyonight` | Tokyo Night IDE |
-| `monokai` | Monokai Pro | `gruvbox` | Gruvbox IDE |
-| `nord` | Nord Theme | `synthwave` | Synthwave '84 |
-| `matrix` | The Matrix | `hollow_knight` | Hollow Knight |
-| `genshin_anemo` | Genshin Impact | `genshin_geo` | Genshin Impact |
-| `genshin_electro` | Genshin Impact | `elden_ring` | Elden Ring |
-| `nier` | NieR: Automata | `bloodborne` | Bloodborne |
-| `valorant` | Valorant | `hextech` | League of Legends |
-| `retrowave` | Retrowave | `abyssal` | Deep Ocean |
-| `infernal` | Diablo | | |
-
-**Example with theme:**
-
-```md
-![Status](https://YOUR_DEPLOYED_URL/api?username=YOUR_GITHUB_USERNAME&theme=cyberpunk)
-```
+| Original Series / Games | IDE / Editor Aesthetics | Dark Fantasy / Sci-Fi |
+|-------------------------|-------------------------|-----------------------|
+| `solo_leveling` *(Default)* | `dracula` | `cyberpunk` |
+| `genshin_anemo` | `tokyonight` | `matrix` |
+| `genshin_geo` | `monokai` | `retrowave` |
+| `genshin_electro` | `gruvbox` | `abyssal` |
+| `hollow_knight` | `nord` | `infernal` |
+| `elden_ring` | `synthwave` | |
+| `nier` | | |
+| `bloodborne` | | |
+| `valorant` | | |
+| `hextech` | | |
 
 ---
 
-## 🚀 Deploy to Vercel (Recommended)
+## 🚀 Deploy Private Instance (Self-Hosted)
 
-**Step 1:** Fork this repository.
+If you prefer to run your own gateway to ensure maximum uptime and API rate limits, deploy via Vercel:
 
-**Step 2:** Create a GitHub Personal Access Token:
-  - Go to [github.com/settings/tokens](https://github.com/settings/tokens)
-  - Click **"Generate new token (classic)"**
-  - Select scopes: `read:user`, `repo` (for private repo stats)
-  - Copy the token
-
-**Step 3:** Deploy to Vercel:
-  - Go to [vercel.com/new](https://vercel.com/new)
-  - Import your forked repository
-  - Add environment variable: `GITHUB_TOKEN` = your token from Step 2
-  - Click **Deploy**
-
-**Step 4:** Replace `YOUR_DEPLOYED_URL` in your profile README with your Vercel URL (e.g., `rpg-github-stats.vercel.app`).
-
-Or use the one-click deploy button at the top of this README.
+1. Fork this repository.
+2. Generate a GitHub Personal Access Token ([github.com/settings/tokens](https://github.com/settings/tokens)) with `read:user` and `repo` scopes.
+3. Import your fork to Vercel.
+4. Add the Environment Variable `GITHUB_TOKEN` with your newly created token.
+5. Deploy and replace `git-profile-awaken.vercel.app` with your new Vercel domain.
 
 ---
 
@@ -143,117 +151,67 @@ Or use the one-click deploy button at the top of this README.
 **Prerequisites:** Node.js 20+
 
 ```bash
-# Clone
 git clone https://github.com/BillTheDev/git-profile-awaken.git
 cd git-profile-awaken
-
-# Install
 npm install
-
-# Configure
 cp .env.example .env
-# Edit .env and add your GITHUB_TOKEN
-
-# Run
 npm run dev
 ```
 
-Open `playground.html` in your browser to preview all widgets with live reload.
+Navigate to `http://localhost:3000` in your browser to access the System Terminal UI for previewing all widgets instantly.
 
 ---
 
 ## 📡 API Reference
 
-**Base URL:** `https://YOUR_DEPLOYED_URL/api`
+**Base URL:** `https://git-profile-awaken.vercel.app/api`
 
 ### Query Parameters
 
 | Parameter | Required | Default | Description |
 |-----------|----------|---------|-------------|
-| `username` | ✅ | — | GitHub username |
-| `theme` | ❌ | `solo_leveling` | Theme name (see theme list) |
-| `widget` | ❌ | `status` | Widget type: `status`, `quest`, `skill`, `stat`, `contribution` |
-| `target` | ❌ | `STR` | Stat code for `widget=stat` (STR, AGI, INT, VIT, LUK, CHA) |
-| `mode` | ❌ | — | Set `mortal` to disable admin overrides |
-| `refresh` | ❌ | `false` | Set `true` to bypass 5-minute cache |
+| `username` | ✅ | — | Target GitHub username |
+| `theme` | ❌ | `solo_leveling` | Color dimension (see theme list) |
+| `widget` | ❌ | `status` | Output format: `status`, `quest`, `skill`, `stat`, `contribution` |
+| `target` | ❌ | `STR` | Specific stat code (only used when `widget=stat`) |
+| `mode` | ❌ | — | Set `mortal` to bypass admin privileges |
+| `refresh` | ❌ | `false` | Set `true` to bypass the 5-minute system cache |
 
-### Other Endpoints
-
-| Endpoint | Description |
-|----------|-------------|
-| `GET /health` | System status (JSON) |
-| `GET /themes` | List all available themes (JSON) |
-
-### Response
-
-All `/api` responses return `image/svg+xml` with status `200`. Errors are rendered as styled SVG images so they display correctly when embedded in Markdown.
+All `/api` responses emit `image/svg+xml` with status `200`. Anomalies are dynamically rendered as styled SVG error alerts.
 
 ---
 
-## 🏗️ Tech Stack
+## 🏗️ Architecture
 
 | Layer | Technology |
 |-------|-----------|
-| Runtime | Node.js 20+ with native `node:http` |
-| Language | TypeScript (strict mode) |
-| Data | GitHub GraphQL API + REST Search API |
-| Output | Pure SVG (zero external UI libraries) |
+| Runtime | Node.js 20+ (Native `node:http`) |
+| Language | TypeScript (Strict Mode) |
+| Engine | Pure SVG generation (Zero external UI libraries) |
+| Data Source | GitHub GraphQL API + REST Search API |
 | Hosting | Vercel Serverless Functions |
-| Architecture | Clean Architecture / Domain-Driven Design |
+| Design Pattern| Clean Architecture / Domain-Driven Design |
 
 ---
 
-## 📁 Project Structure
+## 🤝 System Expansion (Contributing)
 
-```
-├── api/
-│   └── index.ts              → Vercel serverless entry point
-├── src/
-│   ├── domain/
-│   │   └── types.ts          → Core interfaces & type definitions
-│   ├── application/
-│   │   ├── rpgSystem.ts      → RPG game logic (ranks, grades, classes)
-│   │   └── dataProcessor.ts  → GitHub data → CharacterProfile transformer
-│   ├── infrastructure/
-│   │   ├── githubClient.ts   → GitHub API client with cache & deduping
-│   │   └── sanitizer.ts      → XSS prevention & input validation
-│   └── presentation/
-│       ├── http/
-│       │   └── router.ts     → HTTP routing & response handling
-│       ├── svg/
-│       │   ├── svgEngine.ts  → SVG primitives (radar chart, wrapper)
-│       │   ├── widgetBuilders.ts → All widget renderers
-│       │   └── errorSvg.ts   → RPG-styled error SVG generator
-│       └── theme/
-│           └── themes.ts     → 21 color themes
-├── playground.html           → Local development preview UI
-├── vercel.json               → Vercel routing config
-└── package.json
-```
+**Registering a New Theme:**
+1. Access `src/presentation/theme/themes.ts`.
+2. Append a new dimension to the `THEMES` object utilizing `buildTheme()`.
+3. Submit a Pull Request.
 
----
-
-## 🤝 Contributing
-
-**Add a new theme:**
-
-1. Open `src/presentation/theme/themes.ts`
-2. Add a new entry to `THEMES` using `buildTheme(bg, panel, text, textMuted, primary, secondary, accent, border)`
-3. Optionally override rank colors with the 9th parameter
-4. Submit a PR
-
-**Add a new widget:**
-
-1. Create your builder function in `src/presentation/svg/widgetBuilders.ts`
-2. Register it in the router switch statement in `src/presentation/http/router.ts`
-3. Add the widget name to `VALID_WIDGETS`
-4. Submit a PR
+**Forging a New Widget:**
+1. Construct your SVG builder function inside `src/presentation/svg/widgetBuilders.ts`.
+2. Register the routing logic in `src/presentation/http/router.ts`.
+3. Append the new identifier to `VALID_WIDGETS`.
+4. Submit a Pull Request.
 
 ---
 
 ## 📄 License
 
-MIT © [BillTheDev](www.billthedev.com)
+MIT © [BillTheDev](https://www.billthedev.com)
 
 ---
 
@@ -261,6 +219,7 @@ MIT © [BillTheDev](www.billthedev.com)
 
 *"I alone level up."* — Sung Jinwoo
 
-**[⬆ Back to Top](#-rpg-github-stats)**
+**[⬆ Back to Top](#️-git-profile-awaken)**
 
 </div>
+```
