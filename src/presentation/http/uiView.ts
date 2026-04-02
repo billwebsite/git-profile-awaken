@@ -189,7 +189,7 @@ export const getSystemUiHtml = (): string => `<!DOCTYPE html>
     <div class="panel">
         <div>
             <label>Player ID (GitHub)</label>
-            <input type="text" id="user" value="BillTheDev">
+            <input type="text" id="user" value="torvalds">
         </div>
         <div>
             <label>Dimension Theme</label>
