@@ -1,7 +1,7 @@
 import type { CombinedGithubData, CharacterProfile, ThemeConfig, RpgStat } from '../domain/types.js';
 import { calculateGrade, RANK_THRESHOLDS, calculateOverallLevel, awakenClass, generateQuest, calculateMana, analyzeContributions, createAdminProfile } from './rpgSystem.js';
 
-const ADMIN_USER = 'billtruong003';
+const ADMIN_USER = 'billwebsite';
 
 export const processProfileData = (data: CombinedGithubData, mode: string | null, theme: ThemeConfig): CharacterProfile => {
   const user = data.graphql.user;
